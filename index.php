@@ -1,5 +1,4 @@
 <?php
-    echo "Hiii"; 
     
     $tasks = [
         ["id" => 1, "title" => "Buy groceries", "status" => "pending", "due" => "2024-04-15"],
