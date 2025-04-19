@@ -15,4 +15,15 @@
         return $filtered;
 
     
+
+    function groupByStatus(array $tasks): array {
+        $grouped = [];
+        foreach ($tasks as $task) {
+            $grouped[$task['status']][] = $task;
+        }
+        return $grouped;
+    }
+
+
+    
 ?>
