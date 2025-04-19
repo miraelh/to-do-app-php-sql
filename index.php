@@ -13,7 +13,7 @@
             return $task['status'] === $status;
         });
         return $filtered;
-
+    }
     
 
     function groupByStatus(array $tasks): array {
@@ -25,5 +25,5 @@
     }
 
 
-    
+
 ?>
