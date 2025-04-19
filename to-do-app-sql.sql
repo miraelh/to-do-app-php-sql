@@ -36,5 +36,12 @@ VALUES
 INSERT INTO todo_lists (user_id, title)
 VALUES
     (1, 'Mira\'s Tasks'),
-    (1, 'Amir\'s Personal Tasks'),
-    
+    (2, 'Amir\'s Personal Tasks'),
+
+
+INSERT INTO tasks (todo_list_id, title, status, due_date)
+VALUES 
+    (1, 'Buy groceries', 'pending', '2024-04-15'),
+    (1, 'Submit report', 'done', '2024-04-10'),
+    (1, 'Go jogging', 'pending', '2024-04-12'),
+    (1, 'Book flight', 'done', '2024-04-08');
