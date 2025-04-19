@@ -24,6 +24,26 @@
         return $grouped;
     }
 
+
+
+
+    function printing(array $arr) {
+        echo "";
+        foreach ($arr as $key => $value) {
+            echo "\n\"" . $key . "\" => [";
+            foreach ($value as $task) {
+                echo "\n [";
+                foreach ($task as $taskKey => $taskValue) {
+                    echo "\"" . $taskKey . "\" => \"" . $taskValue . "\", ";
+                }
+            }
+   
+        }
+        echo "]\n";
+    }
+
+
+
     $resultFilter = filterByStatus($tasks, "done");
     var_dump($resultFilter);
 
