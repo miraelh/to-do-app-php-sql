@@ -32,4 +32,9 @@ INSERT INTO users (username, email, password_hash)
 VALUES 
     ('mira_fcs', 'mira@fcs.com', 'password_1'),
     ('amir_fcs', 'amir@fcs.com', 'password_2');
+
+INSERT INTO todo_lists (user_id, title)
+VALUES
+    (1, 'Mira\'s Tasks'),
+    (1, 'Amir\'s Personal Tasks'),
     
