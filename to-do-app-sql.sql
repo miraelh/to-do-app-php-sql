@@ -45,3 +45,8 @@ VALUES
     (1, 'Submit report', 'done', '2024-04-10'),
     (1, 'Go jogging', 'pending', '2024-04-12'),
     (1, 'Book flight', 'done', '2024-04-08');
+
+
+SELECT * FROM tasks
+WHERE todo_list_id = 1;
+
