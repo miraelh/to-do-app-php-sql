@@ -24,6 +24,7 @@
         return $grouped;
     }
 
-
+    $resultFilter = filterByStatus($tasks, "done");
+    print($resultFilter)
 
 ?>
