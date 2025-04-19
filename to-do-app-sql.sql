@@ -46,6 +46,9 @@ VALUES
     (1, 'Go jogging', 'pending', '2024-04-12'),
     (1, 'Book flight', 'done', '2024-04-08');
 
+SELECT * FROM tasks
+WHERE status = 'pending';
+
 
 SELECT * FROM tasks
 WHERE todo_list_id = 1;
