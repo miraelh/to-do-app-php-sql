@@ -25,10 +25,10 @@
     }
 
     $resultFilter = filterByStatus($tasks, "done");
-    var_dump($resultFilter)
+    var_dump($resultFilter);
 
 
     $resultGroup = groupByStatus($tasks);
-    var_dump($resultGroup)
+    var_dump($resultGroup);
 
 ?>
