@@ -62,3 +62,6 @@ WHERE id = 1;
 
 DELETE FROM Tasks
 WHERE id = 2;
+
+SELECT * FROM Tasks
+WHERE due_date < '2024-04-10';
