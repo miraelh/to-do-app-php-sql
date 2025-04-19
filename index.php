@@ -34,16 +34,18 @@
             foreach ($value as $task) {
                 echo "\n [";
                 foreach ($task as $taskKey => $taskValue) {
-                    echo "\"" . $taskKey . "\" => \"" . $taskValue . "\", ";
+                    echo "\"" . $taskKey . "\" => \"" . $taskValue . "\" ";
                 }
+                echo rtrim(", ", ", ") . "], ";
             }
-   
+            echo rtrim(", ", ", ") . " \n ";
         }
-        echo "]\n";
+        echo "\n";
     }
 
 
 
+    
     $resultFilter = filterByStatus($tasks, "done");
     printing($resultFilter);
 
