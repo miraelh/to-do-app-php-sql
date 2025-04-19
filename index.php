@@ -45,11 +45,11 @@
 
 
 
-    
+    echo "Filtered by Status\n";
     $resultFilter = filterByStatus($tasks, "done");
     printing(["done" => $resultFilter]);  
 
-
+    echo "Grouped by Status\n";
     $resultGroup = groupByStatus($tasks);
     printing($resultGroup);
 
