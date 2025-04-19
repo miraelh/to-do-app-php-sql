@@ -27,4 +27,8 @@
     $resultFilter = filterByStatus($tasks, "done");
     var_dump($resultFilter)
 
+
+    $resultGroup = groupByStatus($tasks);
+    var_dump($resultGroup)
+
 ?>
