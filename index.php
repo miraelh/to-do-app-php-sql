@@ -25,6 +25,6 @@
     }
 
     $resultFilter = filterByStatus($tasks, "done");
-    print($resultFilter)
+    var_dump($resultFilter)
 
 ?>
