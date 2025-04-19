@@ -48,7 +48,7 @@
 
     
     $resultFilter = filterByStatus($tasks, "done");
-    print_r($resultFilter);
+    printing(["done" => $resultFilter]);  
 
 
     $resultGroup = groupByStatus($tasks);
