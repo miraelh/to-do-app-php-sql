@@ -27,3 +27,9 @@ CREATE TABLE Tasks (
 );
 
 
+
+INSERT INTO users (username, email, password_hash)
+VALUES 
+    ('mira_fcs', 'mira@fcs.com', 'password_1'),
+    ('amir_fcs', 'amir@fcs.com', 'password_2');
+    
