@@ -53,3 +53,7 @@ WHERE status = 'pending';
 SELECT * FROM tasks
 WHERE todo_list_id = 1;
 
+
+UPDATE tasks
+SET status = 'done'
+WHERE id = 1;
