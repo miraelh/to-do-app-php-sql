@@ -8,5 +8,11 @@
         ["id" => 4, "title" => "Book flight", "status" => "done", "due" => "2024-04-08"]
     ];
 
+    function filterByStatus(array $tasks, string $status): array {
+        $filtered = array_filter($tasks, function($task) use ($status) {
+            return $task['status'] === $status;
+        });
+        return $filtered;
+
     
 ?>
