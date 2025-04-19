@@ -45,10 +45,10 @@
 
 
     $resultFilter = filterByStatus($tasks, "done");
-    var_dump($resultFilter);
+    printing($resultFilter);
 
 
     $resultGroup = groupByStatus($tasks);
-    var_dump($resultGroup);
+    printing($resultGroup);
 
 ?>
