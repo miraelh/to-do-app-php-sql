@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS users (
+CREATE TABLE IF NOT EXISTS Users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) UNIQUE NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
@@ -8,52 +8,57 @@ CREATE TABLE IF NOT EXISTS users (
 
 CREATE TABLE TodoLists (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
+    User_id INT NOT NULL,
     name VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES Users(id) ON DELETE CASCADE
+    FOREIGN KEY (User_id) REFERENCES Users(id) ON DELETE CASCADE
 );
 
 
 CREATE TABLE Tasks (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    todo_list_id INT NOT NULL,
+    TodoList_id INT NOT NULL,
     title VARCHAR(255) NOT NULL,
     status ENUM('pending', 'done', 'in-progress') DEFAULT 'pending',
     due_date DATE,
     description TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (todo_list_id) REFERENCES TodoLists(id) ON DELETE CASCADE
+    FOREIGN KEY (TodoList_id) REFERENCES TodoLists(id) ON DELETE CASCADE
 );
 
 
 
-INSERT INTO users (username, email, password_hash)
+INSERT INTO Users (username, email, password_hash)
 VALUES 
     ('mira_fcs', 'mira@fcs.com', 'password_1'),
     ('amir_fcs', 'amir@fcs.com', 'password_2');
 
-INSERT INTO todo_lists (user_id, title)
+INSERT INTO TodoLists (User_id, name)
 VALUES
     (1, 'Mira\'s Tasks'),
-    (2, 'Amir\'s Personal Tasks'),
+    (2, 'Amir\'s Personal Tasks');
 
 
-INSERT INTO tasks (todo_list_id, title, status, due_date)
+INSERT INTO Tasks (TodoList_id, title, status, due_date)
 VALUES 
     (1, 'Buy groceries', 'pending', '2024-04-15'),
     (1, 'Submit report', 'done', '2024-04-10'),
     (1, 'Go jogging', 'pending', '2024-04-12'),
     (1, 'Book flight', 'done', '2024-04-08');
 
-SELECT * FROM tasks
+
+SELECT * FROM Tasks
 WHERE status = 'pending';
 
 
-SELECT * FROM tasks
-WHERE todo_list_id = 1;
+SELECT * FROM Tasks
+WHERE TodoList_id = 1;
 
 
-UPDATE tasks
+UPDATE Tasks
 SET status = 'done'
 WHERE id = 1;
+
+
+DELETE FROM Tasks
+WHERE id = 2;
