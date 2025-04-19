@@ -9,10 +9,11 @@
     ];
 
     function filterByStatus(array $tasks, string $status): array {
+        
         $filtered = array_filter($tasks, function($task) use ($status) {
             return $task['status'] === $status;
         });
-        return $filtered;
+        return array_values($filtered);
     }
     
 
@@ -47,7 +48,7 @@
 
     
     $resultFilter = filterByStatus($tasks, "done");
-    printing($resultFilter);
+    print_r($resultFilter);
 
 
     $resultGroup = groupByStatus($tasks);
