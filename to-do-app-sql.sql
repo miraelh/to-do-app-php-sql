@@ -65,3 +65,10 @@ WHERE id = 2;
 
 SELECT * FROM Tasks
 WHERE due_date < '2024-04-10';
+
+
+SELECT COUNT(*) AS done_tasks_count
+FROM Tasks t
+JOIN TodoLists tl ON t.TodoList_id = tl.id
+JOIN Users u ON tl.user_id = u.id
+WHERE u.username = 'mira_fcs' AND t.status = 'done';
